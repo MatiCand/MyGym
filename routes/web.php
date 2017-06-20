@@ -15,11 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('home', function ()    {
+  $data = [];
+  return view('dashboard',$data);
+})->name('dashboard');
+
+Route::get('about', function ()    {
+  $data = [];
+  return view('about',$data);
+})->name('about');
+
 Route::group(['middleware' => 'auth'], function () {
     //    Route::get('/link1', function ()    {
 //        // Uses Auth Middleware
 //    });
-
-    //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
-    #adminlte_routes
 });

@@ -168,6 +168,9 @@ return [
          */
         Laravel\Tinker\TinkerServiceProvider::class,
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
+        Acoustep\EntrustGui\EntrustGuiServiceProvider::class,
+
+
         /*
          * Application Service Providers...
          */
@@ -176,7 +179,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
     ],
 
     /*
@@ -230,7 +232,7 @@ return [
          * Package Service Aliases...
          */
         'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
-
+        'Entrust'   => Zizaco\Entrust\EntrustFacade::class, 
     ],
 
 ];
